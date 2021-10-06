@@ -3,8 +3,8 @@
 
 #### Como testar usando o Postman:
 * Clonar o projeto e importar para uma IDE
-* Executar o arquivo Application.java
-* Abrir o Postman e importar a coleção "tests.postman_collection.JSON"
+* Executar o arquivo "Application.java"
+* Abrir o Postman e importar a coleção "tests.postman_collection.json"
 * Executar a coleção de requests
 
 
