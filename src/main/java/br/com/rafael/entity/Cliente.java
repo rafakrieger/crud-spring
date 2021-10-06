@@ -1,10 +1,9 @@
 package br.com.rafael.entity;
 
 import java.io.Serializable;
-import java.util.Date;
-import javax.persistence.*;
+import java.time.LocalDate;
 
-import org.springframework.format.annotation.DateTimeFormat;
+import javax.persistence.*;
 
 @Entity
 @Table(name="cliente")
@@ -22,9 +21,7 @@ public class Cliente implements Serializable{
 	@Column(nullable = false)
 	private String cpf;
 	
-	@DateTimeFormat(pattern = "dd/MM/yyyy")
-	@Temporal(TemporalType.DATE)
-	private Date dataNascimento;
+	private LocalDate dataNascimento;
 	
 
 	public Cliente() {
@@ -32,7 +29,7 @@ public class Cliente implements Serializable{
 	}
 		
 
-	public Cliente(String nome, String cpf, Date dataNascimento) {
+	public Cliente(String nome, String cpf, LocalDate dataNascimento) {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.dataNascimento = dataNascimento;
@@ -63,11 +60,11 @@ public class Cliente implements Serializable{
 		this.cpf = cpf;
 	}
 
-	public Date getDataNascimento() {
+	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 
